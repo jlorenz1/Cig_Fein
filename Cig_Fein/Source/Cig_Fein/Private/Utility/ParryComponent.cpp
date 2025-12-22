@@ -229,12 +229,12 @@ AActor* UParryComponent::GetClosestParrableActor()
 
 void UParryComponent::SlowWorldOnParry()
 {
-	UGameplayStatics::SetGlobalTimeDilation(GetWorld(), .4f);
+	UGameplayStatics::SetGlobalTimeDilation(GetWorld(), 0.05f);
 
 	FTimerHandle UnusedHandle;
 	GetWorld()->GetTimerManager().SetTimer(UnusedHandle, [this]() {
 		UGameplayStatics::SetGlobalTimeDilation(GetWorld(), 1.0f);
-		}, .09f, false);
+		}, 0.009f, false);
 }
 
 void UParryComponent::ParryClosestActor()

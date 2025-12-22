@@ -27,9 +27,6 @@ void UTargetComponent::BeginPlay()
 		OwnerActor = owner;
 	}
 
-
-	SetColorState(UnTargetedColorState);
-
 	ACharacter* character = Cast<ACharacter>(OwnerActor);
 	if (!character) return;
 
@@ -47,6 +44,8 @@ void UTargetComponent::BeginPlay()
 
 		mesh->SetOverlayMaterial(OutlineMID);
 	}
+
+	SetColorState(UnTargetedColorState);
 	// ...
 	
 }

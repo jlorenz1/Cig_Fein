@@ -2,7 +2,7 @@
 
 
 #include "Actors/BaseAI.h"
-
+#include "Components/CapsuleComponent.h"
 
 // Sets default values
 ABaseAI::ABaseAI()
@@ -17,14 +17,14 @@ ABaseAI::ABaseAI()
 void ABaseAI::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
 }
 
 // Called every frame
 void ABaseAI::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
+	
 }
 
 void ABaseAI::SetTargetedColorState()
