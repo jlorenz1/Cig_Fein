@@ -7,15 +7,12 @@
 
 ASlime_AI::ASlime_AI()
 {
-
+	SlimePAComponent = CreateDefaultSubobject<USlimePA_Component>(TEXT("SlimePAComponent"));
 }
 
 void ASlime_AI::BeginPlay()
 {
 	Super::BeginPlay();
-
-	SlimePAComponent = CreateDefaultSubobject<USlimePA_Component>(TEXT("SlimePAComponent"));
-
 }
 
 void ASlime_AI::Tick(float DeltaTime)
